@@ -1,0 +1,882 @@
+/* ============================================================
+   RESET
+   ============================================================ */
+
+/*
+   The * selector means "every element".
+   We remove default browser spacing so we can
+   control the layout ourselves.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   GENERAL PAGE STYLING
+   ============================================================ */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+
+    background-color: #0f172a;
+
+    color: #f8fafc;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header {
+
+    background-color: #020617;
+
+    padding: 20px 8%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* Navigation layout */
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* Navigation list */
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+}
+
+
+/* Navigation links */
+
+nav a {
+
+    color: #f8fafc;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+/* Navigation hover effect */
+
+nav a:hover {
+
+    color: #60a5fa;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.menu-button,
+.theme-button {
+
+    background-color: #1e293b;
+
+    color: #f8fafc;
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+.menu-button:hover,
+.theme-button:hover {
+
+    background-color: #334155;
+}
+
+
+/* Menu button is hidden on desktop */
+
+.menu-button {
+
+    display: none;
+}
+
+
+/* ============================================================
+   GENERAL SECTIONS
+   ============================================================ */
+
+section {
+
+    padding: 80px 8%;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+
+/*
+   JavaScript adds the "visible" class
+   when the section enters the screen.
+*/
+
+section.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+section h2 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+
+.section-description {
+
+    max-width: 700px;
+
+    margin-bottom: 30px;
+
+    color: #cbd5e1;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+#hero {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+.eyebrow {
+
+    color: #60a5fa;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+#hero h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 10px;
+}
+
+
+#hero h2 {
+
+    font-size: 1.5rem;
+
+    color: #60a5fa;
+
+    margin-bottom: 20px;
+}
+
+
+#hero p {
+
+    max-width: 650px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+}
+
+
+.primary-button {
+
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+.primary-button:hover {
+
+    background-color: #1d4ed8;
+}
+
+
+.secondary-button {
+
+    border: 1px solid #60a5fa;
+
+    color: #60a5fa;
+}
+
+
+.secondary-button:hover {
+
+    background-color: #1e293b;
+}
+
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+#about {
+
+    background-color: #111827;
+}
+
+
+#about p {
+
+    max-width: 800px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+
+#projects {
+
+    background-color: #020617;
+}
+
+
+.subsection-title {
+
+    margin-top: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Featured projects */
+
+.featured-projects {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+
+/* All projects */
+
+.project-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Project cards */
+
+.project-card {
+
+    background-color: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Project hover effect */
+
+.project-card:hover {
+
+    transform: translateY(-5px);
+
+    background-color: #263449;
+}
+
+
+/* Featured project border */
+
+.project-card.featured {
+
+    border: 1px solid #334155;
+}
+
+
+/* Project status */
+
+.project-status {
+
+    display: inline-block;
+
+    color: #60a5fa;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* Project heading */
+
+.project-card h3 {
+
+    margin-bottom: 15px;
+}
+
+
+/* Project description */
+
+.project-card p {
+
+    margin-bottom: 15px;
+
+    color: #cbd5e1;
+}
+
+
+/* Technology tags */
+
+.project-technologies {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 15px 0;
+}
+
+
+.project-technologies span {
+
+    background-color: #334155;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 0.85rem;
+}
+
+
+/* Project links */
+
+.project-card a {
+
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.project-card a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   PROJECT FILTERS
+   ============================================================ */
+
+.project-filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+.filter-button {
+
+    background-color: #1e293b;
+
+    color: #f8fafc;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.filter-button:hover {
+
+    background-color: #334155;
+
+    transform: translateY(-2px);
+}
+
+
+.filter-button.active {
+
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+
+#skills h3 {
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.skills-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+
+.skills-list li {
+
+    background-color: #1e293b;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+}
+
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+#contact {
+
+    background-color: #111827;
+}
+
+
+#contact p {
+
+    margin-bottom: 25px;
+}
+
+
+/* Contact form */
+
+#contact-form {
+
+    max-width: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+#contact-form label {
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+#contact-form input,
+#contact-form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #334155;
+
+    border-radius: 6px;
+
+    background-color: #0f172a;
+
+    color: #f8fafc;
+
+    font-family: inherit;
+}
+
+
+#contact-form textarea {
+
+    resize: vertical;
+}
+
+
+#contact-form button {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+
+#contact-form button:hover {
+
+    background-color: #1d4ed8;
+}
+
+
+/* Social links */
+
+.social-links {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.social-links a {
+
+    color: #60a5fa;
+
+    text-decoration: none;
+}
+
+
+.social-links a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: #020617;
+
+    color: #94a3b8;
+}
+
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+
+body.light-mode {
+
+    background-color: #f8fafc;
+
+    color: #0f172a;
+}
+
+
+body.light-mode header {
+
+    background-color: #ffffff;
+}
+
+
+body.light-mode nav a {
+
+    color: #0f172a;
+}
+
+
+body.light-mode nav a:hover {
+
+    color: #2563eb;
+}
+
+
+body.light-mode .menu-button,
+body.light-mode .theme-button {
+
+    background-color: #e2e8f0;
+
+    color: #0f172a;
+}
+
+
+body.light-mode #about,
+body.light-mode #contact {
+
+    background-color: #e2e8f0;
+}
+
+
+body.light-mode #projects,
+body.light-mode footer {
+
+    background-color: #f1f5f9;
+}
+
+
+body.light-mode .project-card,
+body.light-mode .skills-list li {
+
+    background-color: #ffffff;
+
+    color: #0f172a;
+}
+
+
+body.light-mode .project-card:hover {
+
+    background-color: #e2e8f0;
+}
+
+
+body.light-mode .project-card p {
+
+    color: #475569;
+}
+
+
+body.light-mode .project-technologies span {
+
+    background-color: #e2e8f0;
+}
+
+
+body.light-mode .filter-button {
+
+    background-color: #e2e8f0;
+
+    color: #0f172a;
+}
+
+
+body.light-mode .filter-button.active {
+
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+body.light-mode #contact-form input,
+body.light-mode #contact-form textarea {
+
+    background-color: white;
+
+    color: #0f172a;
+}
+
+
+/* ============================================================
+   MOBILE / RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+
+    /* Navigation */
+
+    nav {
+
+        flex-wrap: wrap;
+    }
+
+
+    .menu-button {
+
+        display: block;
+    }
+
+
+    nav ul {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding-top: 15px;
+    }
+
+
+    nav ul.active {
+
+        display: flex;
+    }
+
+
+    /* Hero */
+
+    #hero h1 {
+
+        font-size: 3rem;
+    }
+
+
+    #hero h2 {
+
+        font-size: 1.25rem;
+    }
+
+
+    /* Featured projects */
+
+    .featured-projects {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* All projects */
+
+    .project-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* General headings */
+
+    section h2 {
+
+        font-size: 2rem;
+    }
+
+
+    /* Social links */
+
+    .social-links {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
