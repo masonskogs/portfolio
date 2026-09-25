@@ -3,16 +3,11 @@
 
 <head>
 
-    <!-- Tells the browser this is modern HTML -->
+    <!-- Page setup -->
     <meta charset="UTF-8">
-
-    <!-- Makes the website responsive on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Text displayed on the browser tab -->
     <title>Mason Skoglund | Computer Science Student</title>
 
-    <!-- Connect HTML to our CSS file -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -20,25 +15,17 @@
 
 <body>
 
-    <!-- =====================================================
-         HEADER / NAVIGATION
-         ===================================================== -->
-
+    <!-- Header / Navigation -->
     <header>
 
         <nav>
 
-            <!-- Website name -->
             <h2>Mason Skoglund</h2>
 
-
-            <!-- Mobile menu button -->
             <button id="menu-button" class="menu-button">
                 Menu
             </button>
 
-
-            <!-- Navigation links -->
             <ul id="nav-menu">
 
                 <li>
@@ -63,8 +50,6 @@
 
             </ul>
 
-
-            <!-- Dark/light mode button -->
             <button id="theme-button" class="theme-button">
                 Light Mode
             </button>
@@ -74,63 +59,57 @@
     </header>
 
 
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
+    <!-- Main Content -->
     <main>
 
 
-        <!-- =================================================
-             HERO SECTION
-             ================================================= -->
+        <!-- Hero Section -->
+        <section id="hero">
 
-        <section id="hero"> 
-            <p class="eyebrow"> Computer Science Student 
-
+            <p class="eyebrow">
+                Computer Science Student
             </p>
 
-            <h1> 
-                Hi, I'm Mason.                 
-            </h1> 
+            <h1>
+                Hi, I'm Mason.
+            </h1>
 
-            <h2> 
-                Aspiring Software Developer 
-            </h2> 
-            
-            <p> I'm a Computer Science student at North Central College 
-                who enjoys building software, solving problems, and 
-                learning new technologies. I'm currently seeking 
-                opportunities to grow my development skills through 
-                real-world projects and internships. 
-            </p> 
-            
-            
-            <div class="hero-buttons"> 
-                
+            <h2>
+                Aspiring Software Developer
+            </h2>
+
+            <p>
+                I'm a Computer Science student at North Central College
+                who enjoys building software, solving problems, and
+                learning new technologies. I'm currently seeking
+                opportunities to grow my development skills through
+                real-world projects and internships.
+            </p>
+
+            <div class="hero-buttons">
+
                 <a href="#projects" class="primary-button">
-                     View My Projects 
-                </a> 
+                    View My Projects
+                </a>
 
-            <a href="resume.pdf" 
-            class="secondary-button" 
-            target="_blank" 
-            rel="noopener noreferrer"> 
-            Download Resume 
-        </a> 
+                <a href="resume.pdf"
+                   class="secondary-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Download Resume
+                </a>
 
-    </div> 
+            </div>
 
-</section>
+        </section>
 
 
-        <!-- =================================================
-             ABOUT SECTION
-             ================================================= -->
-
+        <!-- About Section -->
         <section id="about">
 
-            <h2>About Me</h2>
+            <h2>
+                About Me
+            </h2>
 
             <p>
                 I'm currently studying Computer Science at North Central
@@ -153,13 +132,12 @@
         </section>
 
 
-        <!-- =================================================
-             PROJECTS SECTION
-             ================================================= -->
-
+        <!-- Projects Section -->
         <section id="projects">
 
-            <h2>Projects</h2>
+            <h2>
+                Projects
+            </h2>
 
             <p class="section-description">
                 A selection of academic and personal projects that
@@ -167,20 +145,16 @@
             </p>
 
 
-            <!-- =============================================
-                 FEATURED PROJECTS
-                 ============================================= -->
-
             <h3 class="subsection-title">
                 Featured Projects
             </h3>
 
 
+            <!-- Featured Projects -->
             <div class="featured-projects">
 
 
                 <!-- Real Estate Website -->
-
                 <article class="project-card featured">
 
                     <span class="project-status">
@@ -198,7 +172,6 @@
                         design and modern web development.
                     </p>
 
-
                     <div class="project-technologies">
 
                         <span>React</span>
@@ -206,7 +179,6 @@
                         <span>CSS</span>
 
                     </div>
-
 
                     <a href="#"
                        target="_blank"
@@ -218,7 +190,6 @@
 
 
                 <!-- Vehicle Management System -->
-
                 <article class="project-card featured">
 
                     <h3>
@@ -231,7 +202,6 @@
                         oriented programming and data structure concepts.
                     </p>
 
-
                     <div class="project-technologies">
 
                         <span>Java</span>
@@ -239,7 +209,6 @@
                         <span>OOP</span>
 
                     </div>
-
 
                     <a href="#"
                        target="_blank"
@@ -251,7 +220,6 @@
 
 
                 <!-- Movie Tracking System -->
-
                 <article class="project-card featured">
 
                     <h3>
@@ -264,7 +232,6 @@
                         data management.
                     </p>
 
-
                     <div class="project-technologies">
 
                         <span>C</span>
@@ -272,7 +239,6 @@
                         <span>File I/O</span>
 
                     </div>
-
 
                     <a href="#"
                        target="_blank"
@@ -285,68 +251,46 @@
             </div>
 
 
-            <!-- =============================================
-                 PROJECT FILTERS
-                 ============================================= -->
-
+            <!-- Project Filters -->
             <h3 class="subsection-title">
                 All Projects
             </h3>
 
-
             <div class="project-filters">
 
-                <button
-                    class="filter-button active"
-                    data-filter="all">
+                <button class="filter-button active" data-filter="all">
                     All
                 </button>
 
-                <button
-                    class="filter-button"
-                    data-filter="c">
+                <button class="filter-button" data-filter="c">
                     C
                 </button>
 
-                <button
-                    class="filter-button"
-                    data-filter="cpp">
+                <button class="filter-button" data-filter="cpp">
                     C++
                 </button>
 
-                <button
-                    class="filter-button"
-                    data-filter="python">
+                <button class="filter-button" data-filter="python">
                     Python
                 </button>
 
-                <button
-                    class="filter-button"
-                    data-filter="java">
+                <button class="filter-button" data-filter="java">
                     Java
                 </button>
 
-                <button
-                    class="filter-button"
-                    data-filter="react">
+                <button class="filter-button" data-filter="react">
                     React
                 </button>
 
             </div>
 
 
-            <!-- =============================================
-                 ALL PROJECTS
-                 ============================================= -->
-
+            <!-- All Projects -->
             <div class="project-container">
 
 
-                <!-- Real Estate -->
-
-                <article
-                    class="project-card"
-                    data-language="react">
+                <!-- Real Estate Website -->
+                <article class="project-card" data-language="react">
 
                     <h3>
                         Real Estate Website
@@ -359,9 +303,11 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>React</span>
                         <span>JavaScript</span>
                         <span>CSS</span>
+
                     </div>
 
                     <a href="#"
@@ -373,11 +319,8 @@
                 </article>
 
 
-                <!-- Movie Tracking -->
-
-                <article
-                    class="project-card"
-                    data-language="c">
+                <!-- Movie Tracking System -->
+                <article class="project-card" data-language="c">
 
                     <h3>
                         Movie Tracking System
@@ -390,8 +333,10 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>C</span>
                         <span>File I/O</span>
+
                     </div>
 
                     <a href="#"
@@ -403,11 +348,8 @@
                 </article>
 
 
-                <!-- Inventory -->
-
-                <article
-                    class="project-card"
-                    data-language="python">
+                <!-- Inventory Management System -->
+                <article class="project-card" data-language="python">
 
                     <h3>
                         Inventory Management System
@@ -420,8 +362,10 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>Python</span>
                         <span>File I/O</span>
+
                     </div>
 
                     <a href="#"
@@ -434,10 +378,7 @@
 
 
                 <!-- Grade Tracker -->
-
-                <article
-                    class="project-card"
-                    data-language="cpp">
+                <article class="project-card" data-language="cpp">
 
                     <h3>
                         Grade Tracker
@@ -450,8 +391,10 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>C++</span>
                         <span>Functions</span>
+
                     </div>
 
                     <a href="#"
@@ -463,11 +406,8 @@
                 </article>
 
 
-                <!-- Java BST -->
-
-                <article
-                    class="project-card"
-                    data-language="java">
+                <!-- Java Binary Search Tree -->
+                <article class="project-card" data-language="java">
 
                     <h3>
                         Vehicle Management System — Binary Search Tree
@@ -479,8 +419,10 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>Java</span>
                         <span>BST</span>
+
                     </div>
 
                     <a href="#"
@@ -493,10 +435,7 @@
 
 
                 <!-- Java Linked List -->
-
-                <article
-                    class="project-card"
-                    data-language="java">
+                <article class="project-card" data-language="java">
 
                     <h3>
                         Vehicle Management System — Linked List
@@ -509,9 +448,11 @@
                     </p>
 
                     <div class="project-technologies">
+
                         <span>Java</span>
                         <span>Linked List</span>
                         <span>OOP</span>
+
                     </div>
 
                     <a href="#"
@@ -527,20 +468,21 @@
         </section>
 
 
-        <!-- =================================================
-             SKILLS SECTION
-             ================================================= -->
-
+        <!-- Skills Section -->
         <section id="skills">
 
-            <h2>Skills</h2>
+            <h2>
+                Skills
+            </h2>
 
             <p class="section-description">
                 Technologies and tools I have experience working with.
             </p>
 
 
-            <h3>Programming Languages</h3>
+            <h3>
+                Programming Languages
+            </h3>
 
             <ul class="skills-list">
 
@@ -553,7 +495,9 @@
             </ul>
 
 
-            <h3>Web Technologies</h3>
+            <h3>
+                Web Technologies
+            </h3>
 
             <ul class="skills-list">
 
@@ -564,7 +508,9 @@
             </ul>
 
 
-            <h3>Database</h3>
+            <h3>
+                Database
+            </h3>
 
             <ul class="skills-list">
 
@@ -573,7 +519,9 @@
             </ul>
 
 
-            <h3>Tools</h3>
+            <h3>
+                Tools
+            </h3>
 
             <ul class="skills-list">
 
@@ -585,61 +533,55 @@
 
         </section>
 
-        
-<!-- =================================================
-     RESUME SECTION
-     ================================================= -->
 
-<section id="resume">
+        <!-- Resume Section -->
+        <section id="resume">
 
-    <h2>Resume</h2>
+            <h2>
+                Resume
+            </h2>
 
-    <p class="section-description">
-        Interested in learning more about my education,
-        technical skills, projects, and experience?
-        View or download my resume below.
-    </p>
+            <p class="section-description">
+                Interested in learning more about my education,
+                technical skills, projects, and experience?
+                View or download my resume below.
+            </p>
 
+            <div class="resume-buttons">
 
-    <div class="resume-buttons">
+                <a href="resume.pdf"
+                   class="primary-button"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Resume
+                </a>
 
-        <!-- Opens the resume PDF in a new tab -->
-        <a href="resume.pdf"
-           class="primary-button"
-           target="_blank"
-           rel="noopener noreferrer">
-            View Resume
-        </a>
+                <a href="resume.pdf"
+                   class="secondary-button"
+                   download>
+                    Download Resume
+                </a>
 
+            </div>
 
-        <!-- Downloads the resume PDF -->
-        <a href="resume.pdf"
-           class="secondary-button"
-           download>
-            Download Resume
-        </a>
-
-    </div>
-
-</section>
+        </section>
 
 
-        <!-- =================================================
-             CONTACT SECTION
-             ================================================= -->
-
+        <!-- Contact Section -->
         <section id="contact">
 
-            <h2>Contact</h2>
+            <h2>
+                Contact
+            </h2>
 
             <p>
                 Interested in connecting? Feel free to reach out.
             </p>
 
-
-            <!-- Contact form -->
-
-            <form id="contact-form">
+            <form
+                id="contact-form"
+                action="https://formspree.io/f/xwlpnrjo"
+                method="POST">
 
                 <label for="name">
                     Name
@@ -649,7 +591,8 @@
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Your name">
+                    placeholder="Your name"
+                    required>
 
 
                 <label for="email">
@@ -660,7 +603,8 @@
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="your@email.com">
+                    placeholder="your@email.com"
+                    required>
 
 
                 <label for="message">
@@ -671,7 +615,8 @@
                     id="message"
                     name="message"
                     rows="5"
-                    placeholder="Your message"></textarea>
+                    placeholder="Your message"
+                    required></textarea>
 
 
                 <button type="submit">
@@ -681,23 +626,24 @@
             </form>
 
 
-            <!-- Social links -->
-
+            <!-- Social Links -->
             <div class="social-links">
 
-                <a href="https://www.linkedin.com/in/mason-skoglund/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     LinkedIn
                 </a>
 
-                <a href="https://github.com/masonskogs"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://github.com/masonskogs"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     GitHub
                 </a>
 
-                <a href="mailto:masonskogs23@gmail.com">
+                <a href="mailto:your-email@example.com">
                     Email
                 </a>
 
@@ -708,10 +654,7 @@
     </main>
 
 
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -721,7 +664,7 @@
     </footer>
 
 
-    <!-- Connect HTML to JavaScript -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
